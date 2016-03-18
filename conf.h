@@ -17,8 +17,8 @@
 
 
 
-#define DELAY_simp    1    //延时函数： 粗略型  开启：1  关闭:  0
-#define DELAY_syst    0    //延时函数： Systic  开启：1  关闭:  0
+#define DELAY_simp    0    //延时函数： 粗略型  开启：1  关闭:  0
+#define DELAY_syst    1    //延时函数： Systic  开启：1  关闭:  0
 
 
 #define EXIT_Open     0    
@@ -32,8 +32,8 @@ void delay_ms(u32 sec);
 
 
 void delay_init(void);
-void delayus(u32 sec);
-void delayms(u32 sec);
+void delayus(u32 nus);
+void delayms(u32 nms);
 
 
 void NVIC_Config(void);
