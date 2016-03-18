@@ -22,7 +22,8 @@
 
 //  _Defines
 
-
+static u8  fac_us=0;
+static u16 fac_ms=0;
 
 //  _Declare 
 
@@ -64,6 +65,9 @@ void delay_ms(u32 sec)
 
 #if DELAY_syst
 
+
+
+
 //延迟函数初始化
 void delay_init(void)	 
 {
@@ -76,7 +80,7 @@ void delay_init(void)
 /* ------------------------------------------------------------------------- */
 
 //微秒级 延时
-void delayus(u32 sec)
+void delayus(u32 nus)
 {		
 	u32 temp;	    	 
 	SysTick->LOAD=nus*fac_us;                             	 
@@ -94,7 +98,7 @@ void delayus(u32 sec)
 /* ------------------------------------------------------------------------- */
 
 //毫秒级 延时
-void delayms(u16 sec)
+void delayms(u32 nms)
 {	 		  	  
 	u32 temp;		   
 	SysTick->LOAD=(u32)nms*fac_ms;                       
