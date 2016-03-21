@@ -63,6 +63,16 @@ void USART3_Print(char *str);
 void USART3_Println(char *str);
 
 
+void I2C1_Config(void);
+void I2C1_Write(u8 id,u8 address,u8 byte);
+u8 I2C1_Read(u8 id,u8 address);
+
+
+void SPI1_Init(void);
+u8 SPI1_Send(u8 Data);
+u8 SPI1_Rece(u8 Buff);
+  
+
 
 
 #endif
